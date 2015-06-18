@@ -76,11 +76,11 @@
                 @{
                     laptopstoreEntities ed = new laptopstoreEntities();
                     var p1 = ed.categories.Select(x => x);
-                    <a href="cat1" class="list-group-item active">Brands</a>
+                    <a href="cat1" class="list-group-item active" style="text-align:center">Brands</a>
                 foreach (var cat in p1)
                 {
                     <form action="/Laptop/index1">
-                        <input type="submit" class="list-group-item" name="category_name" value="@cat.category_name" style="text-align:center;width:200px" />
+                        <input type="submit" class="list-group-item" name="category_name" value="@cat.category_name" style="text-align:center;width:203px" />
                         @*<a href="/Laptop/@cat.category_name" class="list-group-item">@cat.category_name</a>*@
                     </form>
                 }
