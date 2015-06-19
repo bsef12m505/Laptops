@@ -24,7 +24,8 @@
         <div class="editor-field">
             <ul><li style="margin-bottom:30px"><span class="glyphicon glyphicon-user" style="color: White; width: 8%; height: 150%; line-height: 1.65; background-color: GoldenRod"></span> @Html.EditorFor(model => model.fname, new { placeholder = "Name" })</li></ul>
 
-            @Html.ValidationMessageFor(model => model.fname)
+            
+            @Html.ValidationMessageFor(model=>model.fname)
         </div>
         <div class="editor-label" style="color:white">
             @*@Html.LabelFor(model => model.phone)*@
