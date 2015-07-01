@@ -1,6 +1,6 @@
 ﻿@{
-    ViewBag.Title = "dell";
-   
+    ViewBag.Title = "TopRated";
+
 }
 @{
     Layout = null;
@@ -115,17 +115,7 @@
             <!-- Single button -->
 
 
-            <div class="btn-group">
-                <button type="button" class="btn btn-default dropdown-toggle" style="background-color: GoldenRod; padding-left:10px;padding-right:10px ;margin-top:8px" data-toggle="dropdown" aria-expanded="false">
-                    Sort by Price <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu" role="menu">
-                    <li><a href="#">low-high</a></li>
-                    <li><a href="#">High-low</a></li>
-                    <li><a href="#">Popularity</a></li>
-                    <li><a href="#">Highest Rated</a></li>
-                </ul>
-            </div>
+           
 
             <form class="navbar-form navbar-right" role="search" style="margin-right:20px">
                 <div class="form-group">
@@ -138,14 +128,14 @@
         </div>
     </nav>
     <div class="row">
-        <div class="col-md-2" style="margin-bottom:400px">
+        <div class="col-md-2" style="margin-bottom:800px">
             <div class="list-group">
                 <a href="cat1" class="list-group-item active">Brands</a>
                 @foreach (var cat in ViewBag.category)
                 {
                     <form action="/Laptop/index1">
-                        <input type="submit" class="list-group-item" name="category_name" value="@cat.category_name" />
-                       @*<a href="/Laptop/@cat.category_name" class="list-group-item">@cat.category_name</a>*@
+                        <input type="submit" class="list-group-item" name="category_name" value="@cat.category_name" style="text-align:center;width:200px" />
+                        @*<a href="/Laptop/@cat.category_name" class="list-group-item">@cat.category_name</a>*@
                     </form>
                      }
             </div>
@@ -166,95 +156,96 @@
 
         }
         @*<div class="col-xs-1">
-        </div>
-        <div class="col-xs-3">
-            <div id="specs">
-                <a href="/Laptop/get_record?laptopname=HP 15-r001tu&type=core i5&gen=4th&price=50000">
-                    <img src="~/images/download (1).jpg" alt="Mountain View">
-                    <p style="margin-left:30px"><b>Dell 15-r001tu  core i5</b></p>
-                </a>
-                <p style="color:red ;margin-left:50px "><b>RS 50,000</b></p>
-                <br/>
-                <br/>
+            </div>
+            <div class="col-xs-3">
+                <div id="specs">
+                    <a href="/Laptop/get_record?laptopname=HP 15-r001tu&type=core i5&gen=4th&price=50000">
+                        <img src="~/images/download (1).jpg" alt="Mountain View">
+                        <p style="margin-left:30px"><b>Dell 15-r001tu  core i5</b></p>
+                    </a>
+                    <p style="color:red ;margin-left:50px "><b>RS 50,000</b></p>
+                    <br/>
+                    <br/>
+                </div>
+
+                <div id="specs1">
+                    <a href="/Laptop/get_record?laptopname=hppavillion147&type=core i7&gen=4th&price=55000">
+                        <img src="~/images/dell-inspiron-14r-price.jpg" alt="Mountain View" style="width:220px;height:150px" onclick="">
+                        <p style="margin-left:50px"><b>Dell Pavillion 14 core i7</b></p>
+                    </a>
+                    <p style="color:red ;margin-left:50px "><b>RS 55,000</b></p>
+                    <br />
+                </div>
+
+                <div id="specs2">
+                    <a href="/Laptop/get_record?laptopname=hppavillion157&type=core i7&gen=4th&price=70000">
+                        <img src="~/images/images (1).jpg" alt="Mountain View" style="width:220px;height:150px" onclick="">
+                        <p style="margin-left:50px"><b>Dell Pavillion 15 core i7</b></p>
+                    </a>
+                    <p style="color:red ;margin-left:50px "><b>RS 70,000</b></p>
+                </div>
+            </div>
+            <div class="col-xs-3">
+                <div id="specs3">
+                    <a href="/Laptop/get_record?laptopname=hppavillion155&type=core i5&gen=4th&price=40000">
+                        <img src="~/images/images (2).jpg" alt="Mountain View">
+                        <p style="margin-left:30px"><b>Dell 4015 core i5</b></p>
+                    </a>
+                    <p style="color:red ;margin-left:50px "><b>RS 40,000</b></p>
+                </div>
+
+                <!--<div class="col-xs-3">
+                  <div class="col-md-2">-->
+                <div id="specs3">
+                    <a href="/Laptop/get_record?laptopname=hp Envy 17&type=core i7&gen=4th&price=75000">
+                        <img src="~/images/images.jpg" alt="Mountain View">
+                        <p style="margin-left:30px"><b>Dell 17(3D) core i7</b></p>
+                    </a>
+                    <p style="color:red ;margin-left:50px "><b>RS 75,000</b></p>
+                </div>
+
+                <div id="specs3">
+                    <a href="/Laptop/get_record?laptopname=hppavilliondm4&type=core i5&gen=4th&price=49000">
+                        <img src="~/images/images (5).jpg" alt="Mountain View">
+                        <p style="margin-left:30px"><b>Dell Pavillion dm4 core i5</b></p>
+                    </a>
+                    <p style="color:red ;margin-left:50px "><b>RS 49,000</b></p>
+                </div>
+                <!--</div>
+                </div>-->
             </div>
 
-            <div id="specs1">
-                <a href="/Laptop/get_record?laptopname=hppavillion147&type=core i7&gen=4th&price=55000">
-                    <img src="~/images/dell-inspiron-14r-price.jpg" alt="Mountain View" style="width:220px;height:150px" onclick="">
-                    <p style="margin-left:50px"><b>Dell Pavillion 14 core i7</b></p>
-                </a>
-                <p style="color:red ;margin-left:50px "><b>RS 55,000</b></p>
-                <br />
-            </div>
+            <div class="col-xs-3">
+                <div id="specs3">
+                    <br/>
+                    <br/>
+                    <a href="/Laptop/get_record?laptopname=hpenvy4&type=core i5&gen=4th&price=44000">
+                        <img src="~/images/images (6).jpg" alt="Mountain View">
+                        <p style="margin-left:30px"><b>Dell Envy 4 core i5</b></p>
+                    </a>
+                    <p style="color:red ;margin-left:50px "><b>RS 43,999</b></p>
+                </div>
 
-            <div id="specs2">
-                <a href="/Laptop/get_record?laptopname=hppavillion157&type=core i7&gen=4th&price=70000">
-                    <img src="~/images/images (1).jpg" alt="Mountain View" style="width:220px;height:150px" onclick="">
-                    <p style="margin-left:50px"><b>Dell Pavillion 15 core i7</b></p>
-                </a>
-                <p style="color:red ;margin-left:50px "><b>RS 70,000</b></p>
-            </div>
-        </div>
-        <div class="col-xs-3">
-            <div id="specs3">
-                <a href="/Laptop/get_record?laptopname=hppavillion155&type=core i5&gen=4th&price=40000">
-                    <img src="~/images/images (2).jpg" alt="Mountain View">
-                    <p style="margin-left:30px"><b>Dell 4015 core i5</b></p>
-                </a>
-                <p style="color:red ;margin-left:50px "><b>RS 40,000</b></p>
-            </div>
+                <div id="specs3">
+                    <a href="/Laptop/get_record?laptopname=hpenvyspectre&type=core i5&gen=4th&price=64999">
+                        <img src="~/images/images (7).jpg" alt="Mountain View">
+                        <p style="margin-left:30px"><b>Dell Envy Spectre i5</b></p>
+                    </a>
+                    <p style="color:red ;margin-left:50px "><b>RS 64,999</b></p>
+                </div>
 
-            <!--<div class="col-xs-3">
-              <div class="col-md-2">-->
-            <div id="specs3">
-                <a href="/Laptop/get_record?laptopname=hp Envy 17&type=core i7&gen=4th&price=75000">
-                    <img src="~/images/images.jpg" alt="Mountain View">
-                    <p style="margin-left:30px"><b>Dell 17(3D) core i7</b></p>
-                </a>
-                <p style="color:red ;margin-left:50px "><b>RS 75,000</b></p>
-            </div>
-
-            <div id="specs3">
-                <a href="/Laptop/get_record?laptopname=hppavilliondm4&type=core i5&gen=4th&price=49000">
-                    <img src="~/images/images (5).jpg" alt="Mountain View">
-                    <p style="margin-left:30px"><b>Dell Pavillion dm4 core i5</b></p>
-                </a>
-                <p style="color:red ;margin-left:50px "><b>RS 49,000</b></p>
-            </div>
-            <!--</div>
-            </div>-->
-        </div>
-
-        <div class="col-xs-3">
-            <div id="specs3">
-                <br/>
-                <br/>
-                <a href="/Laptop/get_record?laptopname=hpenvy4&type=core i5&gen=4th&price=44000">
-                    <img src="~/images/images (6).jpg" alt="Mountain View">
-                    <p style="margin-left:30px"><b>Dell Envy 4 core i5</b></p>
-                </a>
-                <p style="color:red ;margin-left:50px "><b>RS 43,999</b></p>
-            </div>
-
-            <div id="specs3">
-                <a href="/Laptop/get_record?laptopname=hpenvyspectre&type=core i5&gen=4th&price=64999">
-                    <img src="~/images/images (7).jpg" alt="Mountain View">
-                    <p style="margin-left:30px"><b>Dell Envy Spectre i5</b></p>
-                </a>
-                <p style="color:red ;margin-left:50px "><b>RS 64,999</b></p>
-            </div>
-
-            <div id="specs3">
-                <a href="/Laptop/get_record?laptopname=hpprobook&type=core i7&gen=4th&price=54999">
-                    <img src="~/images/images (9).jpg" alt="Mountain View">
-                    <p style="margin-left:30px"><b>Dell Probook core i7</b></p>
-                </a>
-                <p style="color:red ;margin-left:50px "><b>RS 54,999</b></p>
-            </div>
-        </div>*@
+                <div id="specs3">
+                    <a href="/Laptop/get_record?laptopname=hpprobook&type=core i7&gen=4th&price=54999">
+                        <img src="~/images/images (9).jpg" alt="Mountain View">
+                        <p style="margin-left:30px"><b>Dell Probook core i7</b></p>
+                    </a>
+                    <p style="color:red ;margin-left:50px "><b>RS 54,999</b></p>
+                </div>
+            </div>*@
     </div>
 </body>
 </html>
+
 
 
 

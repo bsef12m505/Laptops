@@ -36,7 +36,22 @@
                 <li> <a href="/Laptop/index" style="color: GoldenRod">HOME</a></li>
                 <li> <a href="/Home/about" style="color: GoldenRod">ABOUT US</a></li>
                 <li> <a href="/Home/contact" style="color: GoldenRod">CONTACT</a></li>
+                <li> <a href="/Laptop/toprated" style="color: GoldenRod">TopRated</a></li>
                 <li> <a href="/Home/polices" style="color: GoldenRod">POLICIES</a></li>
+                @if ((Session["customer_status"] == "login"))
+                {
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" style="font-family:'Monotype Corsiva'"><i class="fa fa-user"></i> @Session["Customer_name"] <b class="caret"></b></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>
+                                <a href="/Home/profie"><i class="fa fa-fw fa-user"></i> Profile</a>
+                            </li>
+                            <li>
+                                <a href="/Home/logout"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                            </li>
+                        </ul>
+                    </li>
+                }
             </ul>
 
         </div>
